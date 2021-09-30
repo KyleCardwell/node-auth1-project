@@ -7,7 +7,8 @@
     "test": "cross-env NODE_ENV=testing jest --watch --verbose --runInBand",
     "migrate": "knex migrate:latest",
     "rollback": "knex migrate:rollback",
-    "seed": "knex seed:run"
+    "seed": "knex seed:run",
+    "resetdb": "npx knex migrate:rollback && npx knex migrate:latest && npx knex seed:run"
   },
   "devDependencies": {
     "@types/jest": "^27.0.1",
@@ -20,6 +21,7 @@
     "supertest": "^6.1.5"
   },
   "dependencies": {
+    "bcrypt": "^5.0.1",
     "bcryptjs": "^2.4.3",
     "connect-session-knex": "^2.1.0",
     "cors": "^2.8.5",

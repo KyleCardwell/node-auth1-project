@@ -1,4 +1,3 @@
-const express = require('express');
 const db = require('../../data/db-config')
 /*
   If the user does not have a session saved in the server
